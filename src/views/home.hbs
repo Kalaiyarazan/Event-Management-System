@@ -1,0 +1,21 @@
+{{>navbar}}
+<div class="p-5">
+    {{#each events}}
+    <div class="pt-3 pb-3">
+        <div class="card text-center">
+            <div class="card-header">
+                {{this.category}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{this.event}}</h5>
+                <p class="card-text">{{this.description}}</p>
+                <p class="card-text">{{this.location}}</p>
+                <a href="#" class="btn btn-primary">Book Ticket</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{this.date}} at {{this.time}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

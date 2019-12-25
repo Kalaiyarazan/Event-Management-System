@@ -1,0 +1,71 @@
+{{>navbar}}
+
+<div class="col-6 p-3 border m-auto">
+  <h4 class="text-center">Create a New Event</h4>
+  <hr class="pb-3">
+  <form action="/create" method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="event">Event Name</label>
+        <input name="event" type="text" class="form-control" id="event" placeholder="Enter Event Name">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="category">Category</label>
+        <select class="form-control" name="category" id="category">
+          <option value="Entertainment">Entertainment</option>
+          <option value="Family Events">Family Events</option>
+          <option value="Birthday Events">Birthday Events</option>
+          <option value="Holiday Parties">Holiday Parties</option>
+          <option value="Corporate Events">Corporate Events</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" class="form-control" id="description" rows="2"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="organiser">Organiser</label>
+      <input name="organiser" type="text" class="form-control" id="organiser" placeholder="Enter Organiser Name">
+    </div>
+
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input name="price" type="number" class="form-control" id="price" placeholder="Enter Ticket Price">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="location">Venue/Location</label>
+        <input name="location" type="text" class="form-control" id="location" placeholder="Enter Event Venue/Location">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="pin">Pin Code</label>
+        <input name="pin" type="text" class="form-control" id="pin" placeholder="Enter Pin Code">
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="date">Date</label>
+        <input name="date" type="date" class="form-control" id="date">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="time">Time</label>
+        <input name="time" type="time" class="form-control" id="time">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Create Event</button>
+    </div>
+  </form>
+
+</div>

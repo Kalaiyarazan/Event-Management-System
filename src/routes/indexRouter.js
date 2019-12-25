@@ -13,7 +13,10 @@ const { Event } = require("../models/Event");
 // Index Route GET Method
 
 indexRouter.get("/", (req, res) => {
-  res.send("Home");
+  Event.findAll().then(eventInstance => {
+    const events = eventInstance.map(instance => instance.get());
+    res.render("home", { events });
+  });
 });
 
 module.exports = indexRouter;
