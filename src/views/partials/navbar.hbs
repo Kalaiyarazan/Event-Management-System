@@ -1,20 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">Event Management System</a>
+    <a class="navbar-brand mr-5 pr-5" href="/">Event Management System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active ml-5 mr-3">
-                <a class="nav-link" href="/">Find Pin Code<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active pl-5 ml-5 mr-3">
-                <a class="nav-link" href="/directory"><span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-        <div class="text-right">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form action="/search" class="form-inline text-center w-75" method="POST">
+            <div class="w-50 pl-5 ml-5">
+                <input name="search" type="text" class="form-control w-100" placeholder="Search here...">
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+
+        <div class="text-right pl-5 ml-5">
             <a href="/create"><button type="button" class="btn btn-light">Create Event</button>
             </a>
         </div>
