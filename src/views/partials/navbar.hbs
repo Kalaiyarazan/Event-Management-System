@@ -1,3 +1,11 @@
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand mr-5 pr-5" href="/">Event Management System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -6,15 +14,31 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form action="/search" class="form-inline text-center w-75" method="POST">
-            <div class="w-50 pl-5 ml-5">
-                <input name="search" type="text" class="form-control w-100" placeholder="Search here...">
+        <form action="/search" class="form-inline text-center w-100" method="POST">
+            <div class="w-50">
+                <input name="search" type="text" class="form-control w-100"
+                    placeholder="Search By Event, Category, Organiser...">
             </div>
-            <button type="submit" class="btn btn-warning">Submit</button>
+            <button type="submit" class="btn btn-warning">Search</button>
         </form>
+        <div class="col-md-4 mr-5 pr-5">
+            <form action="/search/price" method="POST">
+                <div class="form-row">
+                    <div class="col">
+                        <input name="min" type="number" class="form-control" placeholder="Min">
+                    </div> -
+                    <div class="col">
+                        <input name="max" type="number" class="form-control" placeholder="Max">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning">Filter by Price</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
-        <div class="text-right pl-5 ml-5">
-            <a href="/create"><button type="button" class="btn btn-light">Create Event</button>
+        <div class="text-right pl-5">
+            <a href="/create"><button type="button" class="btn btn-danger">Create Event</button>
             </a>
         </div>
     </div>

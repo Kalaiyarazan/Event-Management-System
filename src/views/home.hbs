@@ -1,4 +1,5 @@
 {{>navbar}}
+
 <div class="p-5">
     {{#each events}}
     <div class="pt-3 pb-3">
@@ -7,15 +8,19 @@
                 {{this.category}}
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{this.event}}</h5>
+                <h5 class="card-title"><span style="color:blue;">{{this.event}}</span> at <span style="color:brown;">
+                        {{this.location}}</span></h5>
+                <p class="card-title">Organised by : {{this.organiser}}</p>
                 <p class="card-text">{{this.description}}</p>
-                <p class="card-text">{{this.location}}</p>
-                <a href="#" class="btn btn-primary">Book Ticket</a>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Price- ₹{{this.price}}/-</a>
             </div>
+
             <div class="card-footer text-muted">
                 {{this.date}} at {{this.time}}
             </div>
         </div>
-        {{/each}}
+
     </div>
+    {{/each}}
 </div>

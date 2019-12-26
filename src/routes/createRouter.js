@@ -1,11 +1,17 @@
+//Package Imports
 const express = require("express");
+
 const { Event } = require("../models/Event");
 
+//Router Creation
 const createRouter = express.Router();
 
+//Render create-event
 createRouter.get("/", (req, res) => {
   res.render("create-event");
 });
+
+//Save new event in databse
 createRouter.post("/", (req, res) => {
   const {
     event,
@@ -32,9 +38,9 @@ createRouter.post("/", (req, res) => {
   Event.create(newEvent)
     .then(result => {
       console.log(result.get());
-      res.redirect(`/teacher/${req.params.id}`);
+      res.redirect("/");
     })
     .catch(console.error);
-  res.redirect("/");
 });
+
 module.exports = createRouter;
