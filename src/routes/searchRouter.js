@@ -34,7 +34,6 @@ searchRouter.post("/", (req, res) => {
 searchRouter.post("/price", (req, res) => {
   const min = Number(req.body.min);
   const max = Number(req.body.max);
-  console.log(min, max);
   Event.findAll({
     where: {
       [Op.and]: {
